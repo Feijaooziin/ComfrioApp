@@ -12,9 +12,8 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import { createClient } from "@supabase/supabase-js";
-import Constants from "expo-constants";
+import { Picker } from "@react-native-picker/picker";
 
 // --- CONFIG ---
 const SUPABASE_URL = "https://ekjojpgepbakurzswolu.supabase.co";
@@ -165,7 +164,7 @@ export default function Index() {
         {loading ? (
           <ActivityIndicator
             size="large"
-            color="#FF6B00"
+            color="#1E3A8A"
             style={{ marginTop: 20 }}
           />
         ) : (
@@ -174,6 +173,11 @@ export default function Index() {
           </TouchableOpacity>
         )}
       </ScrollView>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Feito Por:</Text>
+        <Text style={styles.footerText2}>Leonardo Victor ®</Text>
+      </View>
     </SafeAreaView>
   );
 }
@@ -236,5 +240,23 @@ const styles = StyleSheet.create({
     color: "#FFF",
     fontWeight: "700",
     fontSize: 17,
+  },
+  footer: {
+    flexDirection: "row",
+    position: "absolute",
+    bottom: 24,
+    right: 16,
+    alignItems: "flex-end",
+    gap: 5,
+  },
+  footerText: {
+    color: "#666",
+    fontSize: 12,
+    fontWeight: "500",
+  },
+  footerText2: {
+    color: "#666",
+    fontSize: 14,
+    fontWeight: "500",
   },
 });
