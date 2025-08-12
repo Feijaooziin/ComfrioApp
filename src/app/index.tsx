@@ -10,6 +10,7 @@ import {
   Alert,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { createClient } from "@supabase/supabase-js";
@@ -74,6 +75,21 @@ export default function Index() {
         contentContainerStyle={styles.scrollContent}
         keyboardShouldPersistTaps="handled"
       >
+        <View
+          style={{
+            alignItems: "center",
+            marginBottom: 16,
+            borderBottomWidth: 2,
+            borderBottomColor: "#999",
+            paddingBottom: 16,
+          }}
+        >
+          <Image
+            source={require("@/assets/logo-header.png")}
+            style={{ height: 50 }}
+          />
+        </View>
+
         <Text style={styles.label}>Nome completo</Text>
         <TextInput
           placeholder="Seu Nome..."
