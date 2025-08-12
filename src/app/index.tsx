@@ -14,8 +14,9 @@ import Constants from "expo-constants";
 import { Picker } from "@react-native-picker/picker";
 
 // --- CONFIG ---
-const SUPABASE_URL = "https://YOUR_SUPABASE_PROJECT.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://ekjojpgepbakurzswolu.supabase.co";
+const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVram9qcGdlcGJha3VyenN3b2x1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5OTQ3MzMsImV4cCI6MjA3MDU3MDczM30.5tnNwkawbvgeuh7-L4zNrPfQR0QxyZmYNdQD_ehN9FU";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function App() {
@@ -76,19 +77,22 @@ export default function App() {
       <ScrollView>
         <Text>Nome completo</Text>
         <TextInput
+          placeholder="Seu Nome..."
           value={nome}
           onChangeText={setNome}
           style={{ borderWidth: 1, padding: 8, marginBottom: 8 }}
         />
         <Text>E-mail</Text>
         <TextInput
+          placeholder="Seu Email..."
           value={email}
           onChangeText={setEmail}
           keyboardType="email-address"
           style={{ borderWidth: 1, padding: 8, marginBottom: 8 }}
         />
-        <Text>Telefone para contato</Text>
+        <Text>Telefone para contato (com DDD)</Text>
         <TextInput
+          placeholder="Ex.: 41912345678"
           value={telefone}
           onChangeText={setTelefone}
           keyboardType="phone-pad"
@@ -96,6 +100,7 @@ export default function App() {
         />
         <Text>Endereço</Text>
         <TextInput
+          placeholder="Av. Maringá, 4000"
           value={endereco}
           onChangeText={setEndereco}
           style={{ borderWidth: 1, padding: 8, marginBottom: 8 }}
@@ -108,23 +113,24 @@ export default function App() {
           style={{ borderWidth: 1, marginBottom: 8 }}
         >
           <Picker.Item label="Selecione um cargo" value="" />
-          <Picker.Item label="Gerente" value="Gerente" />
-          <Picker.Item label="Supervisor" value="Supervisor" />
+          <Picker.Item label="Auxiliar" value="Auxiliar" />
+          <Picker.Item label="Conferente" value="Conferente" />
+          <Picker.Item label="Pcl" value="Pcl" />
           <Picker.Item label="Analista" value="Analista" />
-          <Picker.Item label="Assistente" value="Assistente" />
         </Picker>
 
-        <Text>Departamento</Text>
+        <Text>Setor</Text>
         <Picker
           selectedValue={departamento}
           onValueChange={(itemValue) => setDepartamento(itemValue)}
           style={{ borderWidth: 1, marginBottom: 8 }}
         >
           <Picker.Item label="Selecione um departamento" value="" />
-          <Picker.Item label="RH" value="RH" />
-          <Picker.Item label="Financeiro" value="Financeiro" />
-          <Picker.Item label="Vendas" value="Vendas" />
-          <Picker.Item label="TI" value="TI" />
+          <Picker.Item label="JBS" value="JBS" />
+          <Picker.Item label="SEARA" value="SEARA" />
+          <Picker.Item label="BAT" value="BAT" />
+          <Picker.Item label="MDIAS" value="MDIAS" />
+          <Picker.Item label="3 CORAÇÕES" value="3 CORAÇÕES" />
         </Picker>
 
         <View style={{ height: 12 }} />
