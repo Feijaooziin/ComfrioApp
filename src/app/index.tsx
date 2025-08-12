@@ -18,7 +18,7 @@ import { Picker } from "@react-native-picker/picker";
 // --- CONFIG ---
 const SUPABASE_URL = "https://ekjojpgepbakurzswolu.supabase.co";
 const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVram9qcGdlcGJha3J6c3dvbHVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5OTQ3MzMsImV4cCI6MjA3MDU3MDczM30.5tnNwkawbvgeuh7-L4zNrPfQR0QxyZmYNdQD_ehN9FU";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVram9qcGdlcGJha3VyenN3b2x1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5OTQ3MzMsImV4cCI6MjA3MDU3MDczM30.5tnNwkawbvgeuh7-L4zNrPfQR0QxyZmYNdQD_ehN9FU";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function Index() {
